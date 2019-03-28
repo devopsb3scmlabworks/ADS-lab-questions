@@ -1,0 +1,53 @@
+// swapping int and double variable using generic class
+
+#include <iostream>
+
+using namespace std;
+
+template <class t>
+
+class myclass
+{
+    t a,b;
+public:
+    myclass(t x,t y)
+    {
+        a=x;
+        b=y;
+    }
+
+    void swapno()
+    {
+        t c=a;
+        a=b;
+        b=c;
+    }
+
+    void disp()
+    {
+        cout<<a<<"\t"<<b<<endl;
+    }
+};
+
+int main()
+{
+    myclass<int> obji(3,4);
+    myclass<double> objd(4.4,6.6);
+    cout<<"for integer data:"<<endl;
+    cout<<"original values:"<<endl;
+    obji.disp();
+    obji.swapno();
+    cout<<"swapped values:"<<endl;
+    obji.disp();
+
+    cout<<"for double type data:"<<endl;
+    cout<<"original values:"<<endl;
+    objd.disp();
+    objd.swapno();
+    cout<<"swapped values:"<<endl;
+    objd.disp();
+
+    return 9;
+
+
+}
