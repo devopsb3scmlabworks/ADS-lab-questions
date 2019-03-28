@@ -1,0 +1,37 @@
+// inputting and printing arrays of int and double type
+
+#include <iostream>
+using namespace std;
+
+template <typename t>
+
+void array()
+{
+    int n;
+    cout<<"Enter the length of array"<<endl;
+    cin>>n;
+
+    t a[n];
+    cout<<"Enter elements of array"<<endl;
+
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+
+    }
+    cout<<"you entered the array"<<endl;
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<"\t";
+
+    }
+    cout<<endl;
+
+}
+
+int main()
+{
+    array<int>();
+    array<double>();
+    return 0;
+}
