@@ -1,0 +1,25 @@
+//Program for factorial of a number using generic function
+
+
+#include <iostream>
+using namespace std;
+
+template <typename T>
+
+T fact (T x)
+{
+    T f=1;
+    for(T i=1;i<=x;i++)
+    {
+        f=f*i;
+    }
+    return f;
+}
+
+int main()
+{
+    cout<<fact<int>(4)<<endl;
+    cout<<fact<double>(4.7)<<endl;
+    cout<<fact<char>(5)<<endl;
+    return 0;
+}
